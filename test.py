@@ -21,6 +21,7 @@ class Employee:
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
 
+
 emp_1 = Employee('Jonah', 'Theussl')
 
 print(emp_1.first)
