@@ -1,5 +1,5 @@
-def func1(acc, mass, vel, time):
-    a = 1/2 * acc * time * time + vel * time + 0
+def func1(vel, time):
+    a = 1/2 * (-9.82) * time * time + vel * time
     if a < 0:
         return 0
     else:
@@ -7,13 +7,13 @@ def func1(acc, mass, vel, time):
 
 
 def getVariables():
-    acceleration = input("Enter acceleration: ")
+    velocity = input("Enter velocity: ")
     try:
-        int(acceleration)
+        int(velocity)
         print('noice')
     except ValueError:
         print('the fuck u doin')
-        acceleration = 0
+        velocity = 0
     masse = input("Enter the mass: ")
     try:
         int(masse)
@@ -21,13 +21,6 @@ def getVariables():
     except ValueError:
         print('the fuck u doin')
         masse = 1
-    velocity = input("Enter the velocity: ")
-    try:
-        int(velocity)
-        print('noice')
-    except ValueError:
-        print('the fuck u doin')
-        velocity = 0
     tid = input("Enter the time: ")
     try:
         int(tid)
@@ -36,6 +29,6 @@ def getVariables():
         print('the fuck u doin')
         tid = 1
     
-    print(func1(int(acceleration), int(masse), int(velocity), int(tid)))
+    print(func1(int(velocity), int(tid)))
 
 getVariables()
