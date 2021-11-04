@@ -28,7 +28,8 @@ def getVariables():
     except ValueError:
         print('the fuck u doin')
         tid = 1
-    
+
     print(func1(int(velocity), int(tid)))
+
 
 getVariables()
