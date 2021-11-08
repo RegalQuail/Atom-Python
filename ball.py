@@ -31,5 +31,4 @@ def getVariables():
 
     print(func1(int(velocity), int(tid)))
 
-
 getVariables()
