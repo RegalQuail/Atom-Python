@@ -10,7 +10,7 @@ y = np.array([0.0098, 0.0197, 0.0296, 0.0404, 0.0504, 0.0604, 0.0702, 0.0804,
 slope, intercept, r, p, std_err = stats.linregress(x, y) # important key values for linear regression
 
 def myfunction(x):
-    return slope * x + intercept # 
+    return slope * x + intercept
 
 mymodel = list(map(myfunction, x))
 
@@ -18,8 +18,8 @@ plt.xlabel("Volt [U]")
 plt.ylabel("Amper [I]")
 
 plt.scatter(x, y)
-plt.plot(x, mymodel)
+plt.plot(x, mymodel, color='r')
 plt.show()
-print(r)
-print(slope)
-print(intercept)
+print(r) # coefficient of correlation
+print(slope) # a
+print(intercept) # b
