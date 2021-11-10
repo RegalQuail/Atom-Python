@@ -3,9 +3,8 @@ import matplotlib.pyplot as plt
 from scipy import stats
 
 
-x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) # x-values
-y = np.array([0.0098, 0.0197, 0.0296, 0.0404, 0.0504, 0.0604, 0.0702, 0.0804,
-             0.0903, 0.1007]) # y-values
+x = np.array([0.2, 0.4, 0.6, 0.8, 1]) # x-values
+y = np.array([2.156626506, 4.369696970, 6.876832845, 8.673400673, 10.41015625]) # y-values
 
 slope, intercept, r, p, std_err = stats.linregress(x, y) # important key values for linear regression
 
@@ -14,14 +13,13 @@ def myfunction(x):
 
 mymodel = list(map(myfunction, x))
 
-plt.xlabel("Volt [U]")
-plt.ylabel("Amper [I]")
-plt.text(6, 0.04, slope)
+plt.xlabel("Length [m]")
+plt.ylabel("Resistivity [R]")
+plt.text(0.7, 4, slope)
 
 plt.scatter(x, y)
 plt.plot(x, mymodel, color='r')
 plt.show()
-
 print(r) # coefficient of correlation
 print(slope) # a
 print(intercept) # b
